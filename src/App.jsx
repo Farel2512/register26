@@ -1,13 +1,16 @@
 import React from 'react';
 import Register from './pages/register';
-// import { Route, Routes } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <>
-      <Register />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Register />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
